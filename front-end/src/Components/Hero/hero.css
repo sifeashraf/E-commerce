@@ -1,0 +1,162 @@
+.app.light .hero {
+  background-color: #f6f6f6 !important;
+  color: black !important;
+}
+.app.dark .feather {
+  background-color: black !important;
+  color: white !important;
+}
+
+.slider-offers {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  height: 60vh;
+}
+.swiper {
+  width: 76%;
+  height: 90%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #f9f8f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.swiper-slide img:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.swiper-slide img:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+@media screen and (440px > width) {
+  .swiper {
+    height: 400px;
+  }
+}
+
+.hero .swiper .text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+}
+
+.hero .swiper .text p:nth-child(1) {
+  font-size: 32px;
+}
+.hero .swiper .text h2 {
+  font-size: 48px;
+}
+.hero .swiper .text-edit {
+  font-size: 32px;
+}
+.hero .swiper .text-edit p span {
+  color: red;
+}
+.hero .swiper button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  padding: 7px 28px;
+}
+@media (max-width: 650px) {
+  .hero .swiper img {
+    display: none;
+  }
+  .hero .swiper .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 81%;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.product-box {
+  height: 90%;
+  width: 26%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  height: 49%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box .text {
+  padding: 30px 0 0 31px;
+}
+.box .text p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.box .text a {
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .product-box {
+    display: none;
+  }
+  .swiper {
+    width: 100%;
+  }
+}
+.feather {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+}
+.feather .feather-box {
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-width: 200px;
+  padding: 5px;
+}
+.feather .feather-box i {
+  font-size: 40px;
+}
+.feather .feather-box p {
+  font-size: 22px;
+}
+@media (max-width: 828px) {
+  .feather .feather-box {
+    width: 49%;
+  }
+}
+@media (max-width: 575px) {
+  .feather .feather-box {
+    width: 100%;
+    padding: 5px;
+    justify-content: start;
+  }
+}
