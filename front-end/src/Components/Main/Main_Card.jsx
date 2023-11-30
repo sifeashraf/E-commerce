@@ -1,48 +1,78 @@
-import React, { useState } from "react";
-import photo2 from "../../images/2.jpg";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
-import { createPortal } from "react-dom";
-
-import { Col } from "react-bootstrap";
-
 import { MdAddShoppingCart } from "react-icons/md";
-import PopUp from "./PopUp";
-export default function MainCard({ img, title, price, bodyText, rating }) {
-  const [showportal, setShowPortal] = useState(false);
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { fetchchosenproduct } from "../../globalstate/Slice/product";
+import { styled } from "@mui/material/styles";
+
+import { motion } from "framer-motion";
+export default function MainCard({ id, img, title, price, description, rating }) {
+  let dispatch = useDispatch();
+  const StyledRating = styled(Rating)({
+    "& .MuiRating-iconFilled": {
+      color: "black",
+    },
+  });
+
+  const StyledButton = styled(Button)({
+    width: "100%",
+  });
+
   return (
-    <div className="main-card">
+    <motion.div
+      className="main-card"
+      key={id}
+      layout
+      initial={{ transform: "scale(0)" }}
+      animate={{ transform: "scale(1)" }}
+      transition={{ duration: 0.6, type: "spring", stiffness: 50 }}>
       <div
         className="card-image"
         style={{
-          backgroundImage: `url(${img})`,
+          backgroundImage: `url(${img[0].attributes.url})`,
         }}
       />
       <div className="card-body">
-        <div className="card-header">
-          <h5>{title}</h5>
-          <span>${price}</span>
+        <h3>{title}</h3>
+        <div className="card-rating">
+          <Stack spacing={1}>
+            <StyledRating
+              name="half-rating-read"
+              defaultValue={rating}
+              precision={0.5}
+              readOnly
+              style={{ margin: "auto" }}
+            />
+          </Stack>
         </div>
-        <div className="card-text">{bodyText}</div>
-        <div className="card-bottom">
-          <div className="card-add" onClick={() => setShowPortal(true)}>
-            <i>
+        <span className="price">${price}</span>
+        <div className="card-text" dangerouslySetInnerHTML={{ __html: description }} />
+
+        <Link className="card-add" to={`productdetails/${id}`}>
+          <StyledButton
+            color="primary"
+            variant="contained"
+            onClick={() => {
+              dispatch(
+                fetchchosenproduct({
+                  product_id: id,
+                  product_img: img,
+                  product_title: title,
+                  product_price: price,
+                  product_description: description,
+                  product_rating: rating,
+                })
+              );
+            }}>
+            <span className="show-deatils">Show Details</span>
+            {/* <i>
               <MdAddShoppingCart />
-            </i>
-            <span>Add To Cart</span>
-          </div>
-          <div className="card-rating">
-            <Stack spacing={1}>
-              <Rating name="half-rating-read" defaultValue={rating} precision={0.5} readOnly />
-            </Stack>
-          </div>
-        </div>
+            </i> */}
+          </StyledButton>
+        </Link>
       </div>
-      {showportal &&
-        createPortal(
-          <PopUp disaplepopup={() => setShowPortal(false)} />,
-          document.getElementById("root")
-        )}
-    </div>
+    </motion.div>
   );
 }

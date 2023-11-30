@@ -1,22 +1,44 @@
-.app.dark .mega-menu a {
+.app.dark .dropdown-menu {
   color: white !important;
+  background-color: black !important;
 }
-.app.light .mega-menu a {
-  color: black !important;
+.app.dark .dropdown-item {
+  color: white !important;
+  background-color: black !important;
 }
+
 .app.dark .mega-menu .dropdown-toggle {
   color: white !important;
+}
+.app.dark .header .logo {
+  color: white !important;
+}
+.app.light .header .logo {
+  color: black !important;
 }
 .app.light .mega-menu .dropdown-toggle {
   color: black !important;
 }
+
+.app.light .dropdown-item {
+  color: black !important;
+  background-color: white !important;
+}
+.app.light .dropdown-menu {
+  color: black !important;
+  background-color: white !important;
+}
+.mega-menu .dropdown-toggle {
+  background-color: transparent !important;
+  border: none;
+}
 .catogry-bar {
   padding-bottom: 13px;
 }
-.catogry-bar p {
+.catogry-bar p,
+.left p {
   margin: 0;
 }
-
 .top-bar {
   padding: 15px;
   display: flex;
@@ -29,6 +51,16 @@
   gap: 5px;
   align-items: center;
 }
+
+@media screen and (max-width: 450px) {
+  .top-bar .left-text {
+    display: none;
+  }
+  .top-bar .right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
 .left-text-note {
   background-color: red;
   padding: 3px 0;
@@ -39,7 +71,7 @@
   font-weight: 600;
 }
 
-.right {
+.top-bar .right {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -84,6 +116,7 @@
 .logo p {
   font-size: 16px;
   font-weight: 700;
+  margin-bottom: 0;
 }
 .logo i {
   font-size: 25px;
@@ -143,6 +176,7 @@
   color: white;
   border-radius: 50%;
 }
+
 .modal-header {
   border: transparent;
 }
@@ -172,18 +206,12 @@
 .mega-menu {
   display: flex;
 }
-.dropdown .btn {
+.dropdown .mega-menu .btn {
   border: none !important;
   outline: none !important;
 }
-.mega-menu .dropdown-toggle {
-  background-color: transparent !important;
+.catgory-drop-down .dropdown-toggle {
+  background: #030d1c;
   color: white;
-  border: none;
-}
-.dropdown-menu {
-  background-color: #0087b7 !important;
-}
-.dropdown-item {
-  color: white !important;
+  border: 3px solid #020202;
 }

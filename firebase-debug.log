@@ -1,0 +1,21 @@
+[debug] [2023-11-24T23:33:23.269Z] ----------------------------------------------------------------------
+[debug] [2023-11-24T23:33:23.271Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\sifea\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-24T23:33:23.272Z] CLI Version:   12.9.1
+[debug] [2023-11-24T23:33:23.272Z] Platform:      win32
+[debug] [2023-11-24T23:33:23.272Z] Node Version:  v20.9.0
+[debug] [2023-11-24T23:33:23.272Z] Time:          Sat Nov 25 2023 01:33:23 GMT+0200 (Eastern European Standard Time)
+[debug] [2023-11-24T23:33:23.272Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-24T23:33:23.280Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-24T23:33:23.280Z] > authorizing via signed-in user (sife.ashraf63@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\web devlopment\react project\E-commerce
+

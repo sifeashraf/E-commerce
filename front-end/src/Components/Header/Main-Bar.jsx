@@ -1,15 +1,20 @@
-import React from "react";
+//import Hooks
+import { useSelector } from "react-redux";
+
+//import import component
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { MdPersonOutline, MdSearch } from "react-icons/md";
-export default function MainBar({ colorMood }) {
+
+export default function MainBar() {
+  let { colorMood } = useSelector((state) => state.moodSlice);
   let selctedcolor = colorMood === "dark" ? "white" : "black";
   return (
     <div className="mainbar">
       <div className="logo">
         <i>
-          <HiOutlineShoppingCart color={selctedcolor} />
+          <HiOutlineShoppingCart />
         </i>
-        <p style={{ color: selctedcolor }}>E-commerce</p>
+        <p>E-commerce</p>
       </div>
       <div className="search">
         <i>
@@ -22,7 +27,7 @@ export default function MainBar({ colorMood }) {
       </div>
       <div className="wishlist-account">
         <a>
-          <HiOutlineShoppingCart className="pointer" color={selctedcolor} />
+          <HiOutlineShoppingCart className="pointer" color={`${selctedcolor}`} />
           <div className="badge">1</div>
         </a>
         <a>

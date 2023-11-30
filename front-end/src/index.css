@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #1d1f21;
+  background-color: #f1f1f1;
 }
 .pointer {
   cursor: pointer;
@@ -26,6 +26,12 @@ body {
 }
 .container-fluid {
   max-width: 1340px;
+  width: "98vw";
+}
+@media screen and (max-width: 780px) {
+  .container-fluid {
+    width: 97vw;
+  }
 }
 ::-webkit-scrollbar {
   width: 0.7rem;

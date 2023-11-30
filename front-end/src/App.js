@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
-import CatogryBar from "./Components/Header/Header";
+import Header from "./Components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Hero_section from "./Components/Hero/Hero_section";
 import { Container } from "react-bootstrap";
@@ -12,10 +12,10 @@ export default function App() {
   document.querySelector("body").style.background = colorMood === "dark" ? "#1d1f21" : "white";
   return (
     <div className={`app ${colorMood}`}>
-      <CatogryBar colorMood={colorMood} />
-      <Container fluid={true} style={{ paddings: "20px", width: "99vw" }}>
+      <Header />
+      <Container fluid={true}>
         <Hero_section />
-        <Main colorMood={colorMood} />
+        <Main />
         <Outlet />
         <ScrollBar />
       </Container>

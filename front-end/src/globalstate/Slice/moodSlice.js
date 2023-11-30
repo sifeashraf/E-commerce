@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 let moodSlice = createSlice({
   name: "moodSlice",
-  initialState: { colorMood: "dark" },
+  initialState: { colorMood: "light" },
   reducers: {
     toggleMood: (state) => {
       state.colorMood = state.colorMood === "dark" ? "light" : "dark";

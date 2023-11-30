@@ -1,20 +1,18 @@
-import React from "react";
+//import Hooks
+import { useSelector } from "react-redux";
+
+//import component
 import { Dropdown } from "react-bootstrap";
 
-export default function CatgoryDropDown({ colorMood }) {
+export default function CatgoryDropDown() {
+  let { colorMood } = useSelector((state) => state.moodSlice);
+
   let selctedcolor = colorMood === "dark" ? "white" : "black";
 
   return (
     <div className="catgory-drop-down">
       <Dropdown>
-        <Dropdown.Toggle
-          style={{
-            background: colorMood === "dark" ? "rgb(43 53 61)" : "#ffffff",
-            color: selctedcolor,
-          }}
-          id="dropdown-basic">
-          Dropdown Button
-        </Dropdown.Toggle>
+        <Dropdown.Toggle id="dropdown-basic">Dropdown Button</Dropdown.Toggle>
         <Dropdown.Menu>
           <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
           <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>

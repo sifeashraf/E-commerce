@@ -1,6 +1,7 @@
-import { Dropdown, DropdownButton, SplitButton, ButtonGroup } from "react-bootstrap";
+//import  component
+import { Dropdown, DropdownButton, ButtonGroup } from "react-bootstrap";
 
-export default function MegaMenu({ colorMood }) {
+export default function MegaMenu() {
   return (
     <div className="mega-menu">
       <DropdownButton
@@ -13,7 +14,6 @@ export default function MegaMenu({ colorMood }) {
         <Dropdown.Item eventKey="1">Action</Dropdown.Item>
         <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
         <Dropdown.Item eventKey="3">action</Dropdown.Item>
-        <Dropdown.Divider />
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
       </DropdownButton>
       <DropdownButton
@@ -26,7 +26,6 @@ export default function MegaMenu({ colorMood }) {
         <Dropdown.Item eventKey="1">Action</Dropdown.Item>
         <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
         <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-        <Dropdown.Divider />
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
       </DropdownButton>
       <DropdownButton
@@ -39,7 +38,6 @@ export default function MegaMenu({ colorMood }) {
         <Dropdown.Item eventKey="1">Action</Dropdown.Item>
         <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
         <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-        <Dropdown.Divider />
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
       </DropdownButton>
       <DropdownButton
@@ -52,7 +50,6 @@ export default function MegaMenu({ colorMood }) {
         <Dropdown.Item eventKey="1">Action</Dropdown.Item>
         <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
         <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-        <Dropdown.Divider />
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
       </DropdownButton>
       <DropdownButton
@@ -65,7 +62,6 @@ export default function MegaMenu({ colorMood }) {
         <Dropdown.Item eventKey="1">Action</Dropdown.Item>
         <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
         <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-        <Dropdown.Divider />
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
       </DropdownButton>
       <DropdownButton
@@ -78,7 +74,6 @@ export default function MegaMenu({ colorMood }) {
         <Dropdown.Item eventKey="1">Action</Dropdown.Item>
         <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
         <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-        <Dropdown.Divider />
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
       </DropdownButton>
     </div>

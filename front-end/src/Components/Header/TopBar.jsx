@@ -1,12 +1,19 @@
-import { BsSun, BsMoon } from "react-icons/bs";
-import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import "./header.css";
-import { useDispatch } from "react-redux";
+//import Hooks
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMood } from "../../globalstate/Slice/moodSlice";
 
-export default function TopBar({ colorMood }) {
+//import import component
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { BsSun, BsMoon } from "react-icons/bs";
+
+//import css
+import "./header.css";
+
+export default function TopBar() {
+  let { colorMood } = useSelector((data) => data.moodSlice);
   let chossenmoodbackground = colorMood === "dark" ? "#2B3445" : "#3A4750";
   let dispatch = useDispatch();
+  console.trace(colorMood);
   return (
     <>
       <div className="top-bar" style={{ color: "white", background: chossenmoodbackground }}>
