@@ -1,9 +1,12 @@
-import React, { useRef, useState } from "react";
+//import import component
 import { Swiper, SwiperSlide } from "swiper/react";
-import image3 from "../../images/banner-15.jpg";
 
+//import css
 import "swiper/css";
 import "swiper/css/pagination";
+
+//import image
+import image3 from "../../images/banner-15.jpg";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";

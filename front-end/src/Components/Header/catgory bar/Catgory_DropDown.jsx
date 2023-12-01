@@ -7,8 +7,6 @@ import { Dropdown } from "react-bootstrap";
 export default function CatgoryDropDown() {
   let { colorMood } = useSelector((state) => state.moodSlice);
 
-  let selctedcolor = colorMood === "dark" ? "white" : "black";
-
   return (
     <div className="catgory-drop-down">
       <Dropdown>

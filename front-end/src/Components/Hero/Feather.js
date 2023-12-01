@@ -1,8 +1,9 @@
-import React from "react";
+//import import component
 import { AiFillThunderbolt } from "react-icons/ai";
 import { IoIosMedal } from "react-icons/io";
 import { GiAlarmClock } from "react-icons/gi";
 import { BiCreditCard } from "react-icons/bi";
+
 export default function Feather() {
   return (
     <div className="feather">

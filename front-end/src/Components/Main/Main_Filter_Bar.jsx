@@ -1,8 +1,7 @@
-import React from "react";
+//import component
 import { Button } from "react-bootstrap";
+//import css
 import "./main.css";
-import { motion } from "framer-motion";
-
 export default function MainFilterBar({ onclick }) {
   const handlebuttonclick = (e) => {
     let btn = document.querySelectorAll(".main-btn");

@@ -1,13 +1,12 @@
-import Rating from "@mui/material/Rating";
-import Stack from "@mui/material/Stack";
-import { MdAddShoppingCart } from "react-icons/md";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+//import Hooks
 import { useDispatch } from "react-redux";
 import { fetchchosenproduct } from "../../globalstate/Slice/product";
+import { motion } from "framer-motion";
+//import import component
+import { Rating, Stack, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
-import { motion } from "framer-motion";
 export default function MainCard({ id, img, title, price, description, rating }) {
   let dispatch = useDispatch();
   const StyledRating = styled(Rating)({
@@ -58,7 +57,7 @@ export default function MainCard({ id, img, title, price, description, rating })
               dispatch(
                 fetchchosenproduct({
                   product_id: id,
-                  product_img: img,
+                  product_img: { data: img },
                   product_title: title,
                   product_price: price,
                   product_description: description,

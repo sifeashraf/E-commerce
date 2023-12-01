@@ -1,7 +1,10 @@
-import React from "react";
+//import import component
+import { BiRightArrowAlt } from "react-icons/bi";
+
+//import image
 import image1 from "../../images/banner-16.jpg";
 import image2 from "../../images/banner-17.jpg";
-import { BiRightArrowAlt } from "react-icons/bi";
+
 export default function ProductBox() {
   return (
     <div className="product-box">

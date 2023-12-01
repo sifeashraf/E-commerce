@@ -1,26 +1,33 @@
-import React, { useEffect, useState } from "react";
-import MainFilterBar from "./Main_Filter_Bar";
-import MainCard from "./Main_Card";
+//import Hooks
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { productsfetch } from "../../globalstate/Slice/product";
-import mona from "../../images/mona-loading-dark-7701a7b97370.gif";
 
+//import import component
+import MainFilterBar from "./Main_Filter_Bar";
+import MainCard from "./Main_Card";
+//import image
+import mona from "../../images/mona-loading-dark-7701a7b97370.gif";
+// variables
+let allProduct = "products?populate=*";
+let menProduct = "products?populate=*&filters[product_category][$eq]=men";
+let womanProduct = "products?populate=*&filters[product_category][$eq]=women";
 let temp = "";
 export default function Main() {
   let dispatch = useDispatch();
   let [product, setProduct] = useState([]);
+
   let product_fetch = useSelector((data) => data.productSlice.product);
   let { loading, error, errormessge } = useSelector((data) => data.productSlice);
-  let allProduct = "products?populate=*";
-  let menProduct = "products?populate=*&filters[product_category][$eq]=men";
-  let womanProduct = "products?populate=*&filters[product_category][$eq]=women";
 
   useEffect(() => {
-    dispatch(productsfetch(allProduct));
-  }, []);
-  useEffect(() => {
-    setProduct(product_fetch);
+    if (Object.keys(product_fetch).length === 0) {
+      dispatch(productsfetch(allProduct));
+    } else {
+      setProduct(product_fetch);
+    }
   }, [product_fetch]);
+
   let filtercatogry = (e) => {
     let chosenCatogry = e === "men" ? menProduct : e === "women" ? womanProduct : allProduct;
     if (e !== temp) {
@@ -35,8 +42,7 @@ export default function Main() {
       {loading ? (
         <div className="loading">
           <img className="mona" src={mona} alt="loading gif mona" />
-          <br />
-          please wait one more second
+          Please Wait One More Second...
         </div>
       ) : product.length ? (
         <div className="main-product-list">

@@ -10,10 +10,9 @@ import { BsSun, BsMoon } from "react-icons/bs";
 import "./header.css";
 
 export default function TopBar() {
+  let dispatch = useDispatch();
   let { colorMood } = useSelector((data) => data.moodSlice);
   let chossenmoodbackground = colorMood === "dark" ? "#2B3445" : "#3A4750";
-  let dispatch = useDispatch();
-  console.trace(colorMood);
   return (
     <>
       <div className="top-bar" style={{ color: "white", background: chossenmoodbackground }}>
