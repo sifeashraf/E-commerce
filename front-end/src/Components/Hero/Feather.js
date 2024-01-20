@@ -6,7 +6,7 @@ import { BiCreditCard } from "react-icons/bi";
 
 export default function Feather() {
   return (
-    <div className="feather">
+    <div className="feather mb-bottom">
       <div className="feather-box">
         <i>
           <AiFillThunderbolt />

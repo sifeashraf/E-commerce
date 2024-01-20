@@ -8,8 +8,8 @@ import "./hero.css";
 
 export default function Hero_section() {
   return (
-    <div className="hero">
-      <div className="slider-offers">
+    <div className="hero ">
+      <div className="slider-offers slider-mb">
         <Slider />
         <ProductBox />
       </div>

@@ -25,7 +25,8 @@ export default function App() {
         dynamicBullets: true,
       }}
       modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper">
+      className="mySwiper mb-bottom"
+    >
       <SwiperSlide>
         <img src={image3} alt="#" />
         <div className="text">
@@ -34,7 +35,9 @@ export default function App() {
           <p className="text-edit">
             SALES UP TO <span>30% OFF</span>
           </p>
-          <span style={{ display: "block" }}>GET FREE SHIPPING ON ORDER OVER 99$</span>
+          <span style={{ display: "block" }}>
+            GET FREE SHIPPING ON ORDER OVER 99$
+          </span>
           <button>SHOP NOW</button>
         </div>
       </SwiperSlide>
@@ -46,7 +49,9 @@ export default function App() {
           <p className="text-edit">
             SALES UP TO <span>30% OFF</span>
           </p>
-          <span style={{ display: "block" }}>GET FREE SHIPPING ON ORDER OVER 99$</span>
+          <span style={{ display: "block" }}>
+            GET FREE SHIPPING ON ORDER OVER 99$
+          </span>
           <button>SHOP NOW</button>
         </div>
       </SwiperSlide>

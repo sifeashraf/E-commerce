@@ -15,7 +15,10 @@ export default function TopBar() {
   let chossenmoodbackground = colorMood === "dark" ? "#2B3445" : "#3A4750";
   return (
     <>
-      <div className="top-bar" style={{ color: "white", background: chossenmoodbackground }}>
+      <div
+        className="top-bar"
+        style={{ color: "white", background: chossenmoodbackground }}
+      >
         <div className="left">
           <div className="left-text">
             <p className="left-text-note">HOT</p>

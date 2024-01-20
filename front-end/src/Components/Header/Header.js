@@ -10,10 +10,10 @@ import CatgoryDropDown from "./catgory bar/Catgory_DropDown";
 import Menu from "./catgory bar/Menu";
 
 export default function Header() {
-  let screensize = useMediaQuery(`(min-width:1000px)`);
+  let screensize = useMediaQuery(`(min-width:1090px)`);
 
   return (
-    <div className="header">
+    <div className="header ">
       <TopBar />
       <MainBar />
       <div className="mainbar">

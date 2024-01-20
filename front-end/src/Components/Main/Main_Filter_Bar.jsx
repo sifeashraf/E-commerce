@@ -1,16 +1,22 @@
 //import component
-import { Button } from "react-bootstrap";
+import { Button } from "@mui/material";
 //import css
 import "./main.css";
 export default function MainFilterBar({ onclick }) {
   const handlebuttonclick = (e) => {
-    let btn = document.querySelectorAll(".main-btn");
+    const btn = document.querySelectorAll(".main-btn");
     btn.forEach((btn) => {
       btn.classList.remove("active");
     });
     e.target.classList.add("active");
 
     onclick(e.target.value);
+  };
+  const buttonstyle = {
+    "&:hover": {
+      color: "white",
+      backgroundColor: "#d32f2f",
+    },
   };
   return (
     <div className="main-filter-bar">
@@ -21,23 +27,32 @@ export default function MainFilterBar({ onclick }) {
       <div className="main-filter">
         <Button
           value={"all"}
-          variant="outline-danger"
+          variant="outlined"
+          color="error"
           className="main-btn"
-          onClick={(e) => handlebuttonclick(e)}>
+          onClick={(e) => handlebuttonclick(e)}
+          sx={buttonstyle}
+        >
           All Product
         </Button>
         <Button
-          variant="outline-danger"
+          variant="outlined"
+          color="error"
           className="main-btn"
           value={"men"}
-          onClick={(e) => handlebuttonclick(e)}>
+          sx={buttonstyle}
+          onClick={(e) => handlebuttonclick(e)}
+        >
           MEN Category
         </Button>
         <Button
-          variant="outline-danger"
+          variant="outlined"
+          color="error"
           className="main-btn"
           value={"women"}
-          onClick={(e) => handlebuttonclick(e)}>
+          sx={buttonstyle}
+          onClick={(e) => handlebuttonclick(e)}
+        >
           WOMEN Category
         </Button>
       </div>
