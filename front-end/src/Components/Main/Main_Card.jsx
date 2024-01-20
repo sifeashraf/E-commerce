@@ -7,7 +7,14 @@ import { Rating, Stack, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
-export default function MainCard({ id, img, title, price, description, rating }) {
+export default function MainCard({
+  id,
+  img,
+  title,
+  price,
+  description,
+  rating,
+}) {
   let dispatch = useDispatch();
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconFilled": {
@@ -26,7 +33,8 @@ export default function MainCard({ id, img, title, price, description, rating })
       layout
       initial={{ transform: "scale(0)" }}
       animate={{ transform: "scale(1)" }}
-      transition={{ duration: 0.6, type: "spring", stiffness: 50 }}>
+      transition={{ duration: 0.6, type: "spring", stiffness: 50 }}
+    >
       <div
         className="card-image"
         style={{
@@ -47,8 +55,10 @@ export default function MainCard({ id, img, title, price, description, rating })
           </Stack>
         </div>
         <span className="price">${price}</span>
-        <div className="card-text" dangerouslySetInnerHTML={{ __html: description }} />
-
+        <div
+          className="card-text"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
         <Link className="card-add" to={`productdetails/${id}`}>
           <StyledButton
             color="primary"
@@ -64,11 +74,9 @@ export default function MainCard({ id, img, title, price, description, rating })
                   product_rating: rating,
                 })
               );
-            }}>
+            }}
+          >
             <span className="show-deatils">Show Details</span>
-            {/* <i>
-              <MdAddShoppingCart />
-            </i> */}
           </StyledButton>
         </Link>
       </div>
