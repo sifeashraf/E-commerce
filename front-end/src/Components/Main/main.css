@@ -162,7 +162,7 @@
   max-width: 100%;
 }
 .details .product-details {
-  direction: rtl;
+  direction: ltr;
   margin: 20px;
 }
 .details .description {

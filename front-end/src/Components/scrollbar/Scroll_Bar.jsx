@@ -1,11 +1,9 @@
 import { AiOutlineArrowUp } from "react-icons/ai";
 import Fab from "@mui/material/Fab";
 
-import React, { useEffect, useState, useRef } from "react";
 import { Zoom, useScrollTrigger } from "@mui/material";
 
 export default function ScrollBar() {
-  let ref = useRef();
   const fabStyle = {
     position: "fixed",
     bottom: 16,
@@ -22,7 +20,8 @@ export default function ScrollBar() {
         variant="extended"
         color={"primary"}
         aria-label="add"
-        onClick={scrolltotop}>
+        onClick={scrolltotop}
+      >
         <AiOutlineArrowUp />
       </Fab>
     </Zoom>

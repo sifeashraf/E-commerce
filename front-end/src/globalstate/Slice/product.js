@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 let API = process.env.REACT_APP_BASE_URL;
-console.log(API);
 // const [myData, setMyData] = useState(allProduct);
 export const productsfetch = createAsyncThunk(
   "products/productsfetch",
@@ -24,7 +23,6 @@ export const productfetch = createAsyncThunk(
       const data = await axios.get(
         `${API}/api/products?populate=*&filters[id][$eq]=${id}`
       );
-      // console.log(data.data.data[0].attributes); //product_img.data[0].attributes.url
       return data.data.data[0].attributes;
     } catch (error) {
       return rejectWithValue(error.message);
